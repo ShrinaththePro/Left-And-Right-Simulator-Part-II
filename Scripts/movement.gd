@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 # this is a varibale to change the speed now and then
 
-var SPEED = 300.0
-var JUMP_VELOCITY = -400.0
+var SPEED = 100.0
+var JUMP_VELOCITY = -200
 var GRAVITY = 5
 
 # Don't use raw values, using variables is usually better, hardcoding

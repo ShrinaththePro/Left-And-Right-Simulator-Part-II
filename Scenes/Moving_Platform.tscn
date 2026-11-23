@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d3pd61dtovi1"]
+
+[ext_resource type="Texture2D" uid="uid://lym3vjb6rw26" path="res://Textures 1.0/Planks.png" id="1_1unfh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7d3rj"]
+size = Vector2(100, 100)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=187881773]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1866153260]
+position = Vector2(0, -41.5)
+scale = Vector2(1, 0.17)
+shape = SubResource("RectangleShape2D_7d3rj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1607717938]
+position = Vector2(0, -41.5)
+scale = Vector2(1, 0.17)
+texture = ExtResource("1_1unfh")

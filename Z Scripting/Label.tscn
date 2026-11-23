@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ce4221hteju5w"]
+
+[ext_resource type="Script" uid="uid://b5jejsxlme7au" path="res://Z Scripting/label.gd" id="1_lpkkm"]
+
+[node name="Node2D" type="Node2D" unique_id=754484095]
+
+[node name="Label" type="Label" parent="." unique_id=372397457]
+offset_left = -78.0
+offset_top = -59.0
+offset_right = 80.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 16
+text = "Shrinath is a pro"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_lpkkm")

@@ -6,21 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d3rj"]
 size = Vector2(4, 14)
 
-[node name="Player" type="Node2D" unique_id=1507669074]
-
-[node name="John" type="CharacterBody2D" parent="." unique_id=1055209345]
+[node name="John" type="CharacterBody2D" unique_id=2020270767]
 script = ExtResource("1_v1qfn")
 
-[node name="Follow" type="Camera2D" parent="John" unique_id=1684315924]
-zoom = Vector2(1.1, 1.1)
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-
-[node name="My Guy" type="Sprite2D" parent="John" unique_id=3689410]
+[node name="My Guy" type="Sprite2D" parent="." unique_id=170138078]
 position = Vector2(0, 2.999998)
 scale = Vector2(0.6354167, 0.5729167)
 texture = ExtResource("2_hh5uf")
 
-[node name="Hitbox" type="CollisionShape2D" parent="John" unique_id=433647628]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=156159899]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_7d3rj")
