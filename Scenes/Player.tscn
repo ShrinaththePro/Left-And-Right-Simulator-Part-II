@@ -2,18 +2,55 @@
 
 [ext_resource type="Script" uid="uid://cls6ntjgtx6ea" path="res://Scripts/movement.gd" id="1_v1qfn"]
 [ext_resource type="Texture2D" uid="uid://bin6fngwnmsaf" path="res://Player/Characters/Front.png" id="2_hh5uf"]
+[ext_resource type="Texture2D" uid="uid://bya30mljumb3n" path="res://Player/Characters/Walk_1.png" id="4_52ee3"]
+[ext_resource type="Texture2D" uid="uid://40x5m6mvijmx" path="res://Player/Characters/Stand.png" id="5_bhhdu"]
+[ext_resource type="Texture2D" uid="uid://2n6gswlir3xh" path="res://Player/Characters/Walk_2.png" id="6_megsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d3rj"]
-size = Vector2(4, 14)
+size = Vector2(7, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7d3rj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hh5uf")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bhhdu")
+}],
+"loop": 1,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_52ee3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bhhdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_megsn")
+}],
+"loop": 1,
+"name": &"Run",
+"speed": 10.0
+}]
 
 [node name="John" type="CharacterBody2D" unique_id=2020270767]
 script = ExtResource("1_v1qfn")
 
-[node name="My Guy" type="Sprite2D" parent="." unique_id=170138078]
-position = Vector2(0, 2.999998)
-scale = Vector2(0.6354167, 0.5729167)
-texture = ExtResource("2_hh5uf")
-
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=156159899]
-position = Vector2(0, 6)
+position = Vector2(-9.5, 11)
 shape = SubResource("RectangleShape2D_7d3rj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61377549]
+position = Vector2(-10, 11.000001)
+scale = Vector2(0.8541667, 0.8020833)
+sprite_frames = SubResource("SpriteFrames_7d3rj")
+animation = &"Jump"

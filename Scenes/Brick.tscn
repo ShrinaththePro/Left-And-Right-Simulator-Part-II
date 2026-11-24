@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://bajqawm68448p"]
+
+[ext_resource type="Script" uid="uid://dhc4pcpyeldbh" path="res://Brick.gd" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://ds63eafs1kl66" path="res://Scenes/killzone.tscn" id="2_dkunl"]
+[ext_resource type="Texture2D" uid="uid://dk543tv355dno" path="res://Textures 1.0/Bricks.png" id="2_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+size = Vector2(21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("2_epypp")
+region = Rect2(0, 0, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("2_epypp")
+region = Rect2(25, 0, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("2_epypp")
+region = Rect2(50, 0, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("2_epypp")
+region = Rect2(75, 0, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+atlas = ExtResource("2_epypp")
+region = Rect2(75, 25, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+atlas = ExtResource("2_epypp")
+region = Rect2(25, 25, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
+atlas = ExtResource("2_epypp")
+region = Rect2(0, 25, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqns4"]
+atlas = ExtResource("2_epypp")
+region = Rect2(50, 25, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0ka3"]
+atlas = ExtResource("2_epypp")
+region = Rect2(0, 50, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0h7mo"]
+atlas = ExtResource("2_epypp")
+region = Rect2(25, 50, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
+atlas = ExtResource("2_epypp")
+region = Rect2(50, 50, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2bti"]
+atlas = ExtResource("2_epypp")
+region = Rect2(75, 50, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta5nu"]
+atlas = ExtResource("2_epypp")
+region = Rect2(0, 75, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flf07"]
+atlas = ExtResource("2_epypp")
+region = Rect2(25, 75, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k73cj"]
+atlas = ExtResource("2_epypp")
+region = Rect2(50, 75, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjqkl"]
+atlas = ExtResource("2_epypp")
+region = Rect2(75, 75, 25, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hol4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d21ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d7sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir8iy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqns4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0ka3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0h7mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr8wp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2bti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta5nu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flf07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k73cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjqkl")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1432456839]
+collision_layer = 4
+script = ExtResource("1_0e48y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=745360487]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="Area2D" parent="." unique_id=1904604051 instance=ExtResource("2_dkunl")]
+position = Vector2(762.3848, -391.54916)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=184613251]
+position = Vector2(-761.8848, 391.54916)
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1313782721]
+target_position = Vector2(23, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1395501185]
+target_position = Vector2(-24, -1)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1260123957]
+sprite_frames = SubResource("SpriteFrames_0hol4")
