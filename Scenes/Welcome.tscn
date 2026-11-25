@@ -3,12 +3,11 @@
 [ext_resource type="Script" uid="uid://b5jejsxlme7au" path="res://Z Scripting/label.gd" id="1_lpkkm"]
 
 [node name="Label" type="Label" unique_id=1964257346]
-offset_left = -78.0
+offset_left = -160.0
 offset_top = -59.0
 offset_right = 80.0
-offset_bottom = 51.0
+offset_bottom = 155.0
 theme_override_font_sizes/font_size = 16
-text = "Shrinath is a pro"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_lpkkm")
