@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://h3dq5pt5ywg8" path="res://Scenes/Coin.tscn" id="1_wqkje"]
 [ext_resource type="Texture2D" uid="uid://qtcptw701xqf" path="res://A Textures 2.0/four-seasons-tileset.png" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://ds63eafs1kl66" path="res://Scenes/killzone.tscn" id="6_8c0lf"]
+[ext_resource type="PackedScene" uid="uid://c5cg65dm33x70" path="res://invis_block.tscn" id="9_bvt00"]
 
 [sub_resource type="Animation" id="Animation_81xng"]
 resource_name = "Move"
@@ -392,6 +393,7 @@ texture = ExtResource("2_k5f4k")
 sources/0 = SubResource("TileSetAtlasSource_0f350")
 
 [node name="Level" type="Node2D" unique_id=1989189986]
+metadata/_edit_vertical_guides_ = [-264.0]
 
 [node name="GameManager" type="Node" parent="." unique_id=2042366932]
 unique_name_in_owner = true
@@ -403,16 +405,28 @@ position = Vector2(498, -300)
 [node name="Coins" type="Node" parent="." unique_id=1827515522]
 
 [node name="Coin" parent="Coins" unique_id=633905176 instance=ExtResource("1_wqkje")]
-position = Vector2(-202, -118)
+position = Vector2(-200, -118)
 
 [node name="Coin2" parent="Coins" unique_id=892502526 instance=ExtResource("1_wqkje")]
 position = Vector2(3, -307)
+
+[node name="Coin7" parent="Coins" unique_id=1103263346 instance=ExtResource("1_wqkje")]
+position = Vector2(577, -286)
+
+[node name="Coin8" parent="Coins" unique_id=2021149658 instance=ExtResource("1_wqkje")]
+position = Vector2(1010, -708)
+
+[node name="Coin9" parent="Coins" unique_id=338882214 instance=ExtResource("1_wqkje")]
+position = Vector2(335, -884)
 
 [node name="Coin3" parent="Coins" unique_id=793268090 instance=ExtResource("1_wqkje")]
 position = Vector2(86, -118)
 
 [node name="Coin4" parent="Coins" unique_id=693196407 instance=ExtResource("1_wqkje")]
 position = Vector2(-306, -32)
+
+[node name="Coin10" parent="Coins" unique_id=497804374 instance=ExtResource("1_wqkje")]
+position = Vector2(-471, -153)
 
 [node name="Coin5" parent="Coins" unique_id=361129962 instance=ExtResource("1_wqkje")]
 position = Vector2(208, -330)
@@ -442,16 +456,16 @@ position = Vector2(-384, -59)
 
 [node name="Player" parent="." unique_id=1507669074 instance=ExtResource("1_tumq0")]
 z_index = 5
-position = Vector2(703, -370)
+position = Vector2(-395, -78)
 collision_layer = 2
 
 [node name="Follow" type="Camera2D" parent="Player" unique_id=1894535433]
-position = Vector2(1, -1)
+position = Vector2(-8, 5)
 zoom = Vector2(1.1, 1.1)
-limit_left = -10000125
-limit_top = -9999861
-limit_right = 9999875
-limit_bottom = 339
+limit_left = -10000783
+limit_top = -9999842
+limit_right = 9999217
+limit_bottom = 358
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
@@ -479,5 +493,8 @@ tile_set = SubResource("TileSet_0f350")
 [node name="Foreground" type="TileMapLayer" parent="Node" unique_id=1281777554]
 tile_map_data = PackedByteArray("AAAAAPj/AAAAAAUAAAAAAPf/AAAAAAQAAAAAAPb/AAAAAAMAAAAhAOn/AAACAAQAAAAhAOr/AAACAAUAAAAiAOn/AAADAAQAAAAiAOr/AAADAAUAAAAjAOn/AAAEAAQAAAAjAOr/AAAEAAUAAAAkAOj/AAACAAQAAAAkAOn/AAACAAUAAAAlAOj/AAADAAQAAAAlAOn/AAADAAUAAAAmAOj/AAAEAAQAAAAmAOn/AAAEAAUAAAAiAOv/AAADAAYAAAAiAOz/AAADAAcAAAAiAO3/AAADAAgAAAAlAOv/AAADAAcAAAAlAOz/AAADAAgAAAAlAO3/AAADAAgAAAAlAOr/AAADAAYAAAAjAO3/AAABAAYAAAAeAO3/AAABAAYAAAAdAOv/AAAKAAMAAAA=")
 tile_set = SubResource("TileSet_0f350")
+
+[node name="Invis Block" parent="." unique_id=137415525 instance=ExtResource("9_bvt00")]
+position = Vector2(976, -439)
 
 [connection signal="tree_entered" from="Node/Ground" to="Node/Ground" method="_on_tree_entered"]
